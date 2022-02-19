@@ -5,16 +5,20 @@ var saveTask = $(".saveBtn");
 var localStorageWasSaved = $(".localStorage")
 
 
+var datetime = null,
+        date = null;
 
+var update = function () {
+    date = moment(new Date())
+    datetime.html(date.format('dddd, MMMM Do YYYY, h:mm:ss a'));
+};
 
-//insert current day "<p> element" with moment.js
-// timeToday.textContent = currentTime.format("MMM DD, YYYY - hh:mm:ss a")
+$(document).ready(function(){
+    datetime = $('#currentDay')
+    update();
+    setInterval(update, 1000);
+});
 
-    setInterval(function(){
-        console.log(currentTime.format("MMM DD, YYYY - hh:mm:ss a"))
-        timeToday.textContent = currentTime.format("MMM DD, YYYY - hh:mm:ss a")
-        console.log("test")
-    },1000)
 
 // creates a current time variable to use to compare with
 var time = moment().hour()
@@ -63,14 +67,3 @@ saveTask.on("click", function(){
  })}
 displayText()
 
-
-
-// var saveNine = $("#9")
-// var saveNine = $("#10")
-// var saveTen = $("#11")
-// var saveEleven = $("#12")
-// var saveTwelve = $("#13")
-// var saveTwo = $("#14")
-// var saveThree = $("#15")
-// var saveFour = $("#16")
-// var saveFive = $("#17")
