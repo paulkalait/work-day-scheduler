@@ -35,8 +35,8 @@ textarea{
 .localStorage{
   display: none;
   font-style: italic;
+  font-weight: bolder;
 }
-
 
 .row {
   white-space: pre-wrap;

@@ -4,7 +4,7 @@ var textarea = $(textarea);
 var saveTask = $(".saveBtn");
 var localStorageWasSaved = $(".localStorage")
 
-
+//function used to display the updated .current time 
 var datetime = null,
         date = null;
 
